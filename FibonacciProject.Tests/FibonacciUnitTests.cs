@@ -69,5 +69,20 @@ namespace FibonacciProject.Tests
             //assert
             Assert.Equal(3, result);
         }
+
+        [Theory]
+        [InlineData(3, 2)]
+        [InlineData(4, 3)]
+        public void Fib_GevenN_ReturnM(int n, int m)
+        {
+            //arrage
+            int input = n;
+
+            //act
+            int result = Fibonacci.Fib(input);
+
+            //assert
+            Assert.Equal(m, result);
+        }
     }
 }
